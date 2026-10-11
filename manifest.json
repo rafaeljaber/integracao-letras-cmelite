@@ -1,0 +1,26 @@
+{
+  "id": "com.jaber.integracao-letras-cmelite",
+  "name": "Integração Letras CMElite",
+  "version": "0.1.0",
+  "description": "Recebe do CMElite (REAPER) a passagem das letras e projeta as partes da música no Spresenter.",
+  "author": "Rafael Jáber",
+  "minAppVersion": "0.3.50",
+  "sdk": "0.3.50",
+  "main": "dist/code.js",
+  "ui": "dist/ui/index.html",
+  "panels": [
+    {
+      "id": "main",
+      "title": "CMElite",
+      "icon": "music"
+    }
+  ],
+  "permissions": [
+    "net:connect",
+    "assets:read",
+    "live:write",
+    "outputs:read",
+    "notifications:write"
+  ],
+  "background": true
+}

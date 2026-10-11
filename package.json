@@ -1,0 +1,24 @@
+{
+  "name": "com.jaber.integracao-letras-cmelite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build --config vite.code.config.ts && vite build --config vite.ui.config.ts",
+    "package": "npm run build && node scripts/package.mjs",
+    "dev": "vite build --watch --config vite.code.config.ts",
+    "test": "bun test",
+    "typecheck": "tsc -p tsconfig.json && tsc -p src/ui/tsconfig.json && tsc -p bridge/tsconfig.json",
+    "bridge:dev": "bun bridge/main.ts",
+    "bridge:build": "bun scripts/build-bridge.ts"
+  },
+  "dependencies": {
+    "@spresenter/plugin-sdk": "file:sdk/spresenter-plugin-sdk.tgz"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "adm-zip": "^0.5.17",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}
